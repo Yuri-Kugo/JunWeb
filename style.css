@@ -1,4 +1,10 @@
-.glava_1{
-background-color: red;
 
+.box{
+    width: 150px;
+    height: 100px; 
+    margin: 0px 15px;
+    padding: 100px;
+    background: #aaa;
+    float: left;
+    border: 1px solid #000 ;
 }
