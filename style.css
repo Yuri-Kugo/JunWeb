@@ -1,13 +1,23 @@
 
-.big_box{
+.conteiner{
+   
+}
+
+.Box_body{
+    width: 100%;
+    margin:0 auto;
+    height:1500px;
+    border:1px solid #000;
     display: flex;
 }
 
 
 .box{
     margin: 0px 15px;
+    align-content: stretch;
     padding: 100px; 
     background: #aaa;
     float: left;
-    border: 1px solid #000 ;//
+    border: 1px solid #000 ;
+    flex-grow: 1;
 }
