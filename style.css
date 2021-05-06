@@ -9,6 +9,7 @@
     height:1500px;
     border:1px solid #000;
     display: flex;
+    position:absolute;
 }
 
 
@@ -24,11 +25,9 @@
 
 .mini_box{
    flex-direction: column-reverse;
-   margin: 0px 15px;
     align-content: stretch;
     padding: 100px; 
     background: #fae;
-    float: left;
     border: 1px solid #000 ;
     flex-grow: 1;
 
