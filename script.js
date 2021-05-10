@@ -1,11 +1,10 @@
-use string
+"use strict";
 
+let id = document.getElementById("element");
+element.onclick = HiWorld;
 
-
-Function HiWorld(){
-   console.log("Ты крутой!");
-   //document.getElementById("usr").
+function HiWorld(){
+   console.log("Привет мир");
 }
 
 
-usr.onclick = HiWorld;
