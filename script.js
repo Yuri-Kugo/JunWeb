@@ -1,9 +1,9 @@
 "use strict";
 
-let id = document.getElementById("element");
-element.onclick = HiWorld;
+const id = document.getElementById("sayStart");
+link.onclick = hiWorld;
 
-function HiWorld(){
+function hiWorld(){
    console.log("Привет мир");
 }
 
