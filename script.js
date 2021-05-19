@@ -1,5 +1,6 @@
 "use strict";
 
+let link;
 const id = document.getElementById("sayStart");
 link.onclick = hiWorld;
 
