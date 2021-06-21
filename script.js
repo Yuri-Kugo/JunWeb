@@ -1,38 +1,32 @@
-// Показ "hello world" при нажатие на боксик.
-document.querySelector(".mini_box").onclick = sayHi
+let draggingCard = undefined;
 
-function sayHi () {
-   console.log("helloy world")
-};
+const dragStart = (card) => () => {
+  draggingCard = card;
+}
 
-//drag and drop
-// dragStar - начало
-// drahEnd draover drop
+const drop = (box) => () => {
+  if (draggingCard) {
+    box.appendChild(draggingCard);
+    draggingCard = undefined;
+  }
+}
 
-const dargAndDrop =  () => {
-   const card = document.querySelectorAll('.js_card');
-   const cellsBox = document.querySelectorAll('.cell-box');
+const dragOver = (event) => {
+  event.preventDefault();
+}
 
+const dragEnter = (event) => {
+  event.preventDefault();
+}
 
-   const dragStart = function () {
-      setTimeout( () => {
-         this.classList.add('hide');
-      }, 0)
-   };
+const boxes = document.querySelectorAll('.box');
+boxes.forEach(box => {
+  box.addEventListener('drop', drop(box));
+  box.addEventListener('dragover', dragOver);
+  box.addEventListener('dragenter', dragEnter);
+})
 
-   const dragEnd = function () {
-      this.classList.remove('hide');
-   };
-
-   card.addEventListener("dragstart", dragStart);
-   card.addEventListener("dragend", dragEnd);
-
-
-    
-
-
-
-
-
-
-} 
+const cards = document.querySelectorAll('.js_card');
+cards.forEach(card => {
+  card.addEventListener('dragstart', dragStart(card));
+})
