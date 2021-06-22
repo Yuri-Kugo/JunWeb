@@ -1,6 +1,6 @@
 body{
   height: 100%;
-  background-color: #333;
+  background-color:#005405;
 }
 
 
@@ -10,7 +10,7 @@ body{
 
     margin: 0 auto;
 
-    border: 1px solid #000;
+    border: 1px solid #400234;
 
     display: flex;
     position: absolute;
@@ -26,8 +26,8 @@ body{
     flex-grow: 1;
 
     border: 1px solid #000;
-    background: #aaa;
-    border-radius: 20px;
+    background:#8B008B;
+    
 }
 
 .mini_box{
@@ -35,7 +35,7 @@ body{
     align-content: stretch;
     padding: 100px; 
     margin: 8px;
-    background: linear-gradient(purple, fuchsia);
+    background: linear-gradient(#DAA520, #B8860B);
     border: 1px solid #000 ;
     flex-grow: 1;
     border-radius: 15px;
@@ -54,3 +54,9 @@ body{
 }
 
 
+/* Снопка "+" */
+
+.button{
+    flex-direction: column-reverse;
+    margin-left: 180px;
+}
