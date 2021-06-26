@@ -1,5 +1,5 @@
 // Показ "hello world" при нажатие на боксик.
-document.querySelectorAll(".mini_box").onclick = sayHi
+document.querySelector(".mini_box").onclick = sayHi
 
 function sayHi () {
    console.log("helloy world")
@@ -46,13 +46,26 @@ cards.forEach(card => {
 
 //Добавление нового блока. 
 
-function addDiv() {
-    let link = document.getElementById('.box');
-    let element = document.createElement('div');
-    element.className = "mini_box";
-    element.innerHTML = "боксик";
 
-  link.appendChild(element);
-      // alert("Работает!");
+  function addDiv() {
+
+     let link = document.getElementById('container1');
+     let element = document.createElement('div');
+      element.className = "mini_box";
+      element.innerHTML = "боксик";
+   
+   link.appendChild(element);
+       // alert("Работает!");
+
+
+       let btns = document.querySelectorAll('button');
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+    getParentId(btn);
+  });
+});
 }
+
+
+
 
