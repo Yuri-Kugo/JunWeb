@@ -46,24 +46,18 @@ cards.forEach(card => {
 
 //Добавление нового блока. 
 
+// document.querySelector('#container').onclick = addDiv;
 
-  function addDiv() {
+  function addDiv(el) {
+      let link = el.parentElement;
+    //  let link = document.getElementById('container1');
 
-     let link = document.getElementById('container1');
      let element = document.createElement('div');
       element.className = "mini_box";
       element.innerHTML = "боксик";
    
    link.appendChild(element);
        // alert("Работает!");
-
-
-       let btns = document.querySelectorAll('button');
-  btns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-    getParentId(btn);
-  });
-});
 }
 
 
