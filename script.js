@@ -46,20 +46,20 @@ cards.forEach(card => {
 
 //Добавление нового блока. 
 
-// document.querySelector('#container').onclick = addDiv;
-
   function addDiv(el) {
-      let link = el.parentElement;
-    //  let link = document.getElementById('container1');
-
-     let element = document.createElement('div');
+    let link = el.parentElement;
+    let element = document.createElement('div');
       element.className = "mini_box";
       element.innerHTML = "боксик";
+      element.id ="id";
    
    link.appendChild(element);
        // alert("Работает!");
 }
 
 
-
-
+//Удаление блока.
+function removeDiv(el) {
+  let revDiv = el.parentElement;
+  revDiv.remove();
+}
