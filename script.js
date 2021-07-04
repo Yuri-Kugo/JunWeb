@@ -46,22 +46,14 @@ cards.forEach(card => {
 
 //Добавление нового блока. 
 
-  function addDiv(el) {
-    let link = el.parentElement;
-    let element = document.createElement('div');
-      // element.className = "mini_box";
-      
-      // element.innerHTML += "<div class="mini_box js_card" id="box2" draggable="true">
-      // <button type="button" class="bat" id="minus" onclick="removeDiv(this)">-</button>      
-      //     боксик</div>";
+function addDiv(el) {
+  let link = el.parentElement;
+  let element = document.createElement('div');
+  element.innerHTML = `<div class="mini_box js_card" id="box2" draggable="true">
+    <button type="button" class="bat" id="minus" onclick="removeDiv(this)">-</button>
+  боксик</div>`
 
-      element.innerHTML = element.innerHTML + "<div class="mini_box js_card" id="box2" draggable="true">
-      <button type="button" class="bat" id="minus" onclick="removeDiv(this)">-</button>      
-          боксик</div>";    
-      // element.id ="id";
-   
-   link.appendChild(element);
-       // alert("Работает!");
+  link.appendChild(element);
 }
 
 
